@@ -1,6 +1,6 @@
 # WinToolify
 
-![Ekran görüntüsü 2025-04-08 195025](https://github.com/user-attachments/assets/4829b3b3-53c5-4495-a9ba-67bb22fbb07e)
+![Ekran görüntüsü 2025-04-08 195025](https://github.com/user-attachments/assets/426f326d-7557-4178-b11c-502fe430c949)
 
 [ENGLISH README](https://github.com/burakarslan0110/WinToolify/blob/main/README-EN.md)
 ## Genel Bakış
@@ -61,9 +61,9 @@ WinToolify, sistem performansını artırmak, hizmetleri yönetmek, gizlilik aya
 
 ### Yedekleme Dosyası Oluşturma Menüsü
 - **Yedekleme Dosyası Oluşturma**: Masaüstü,Belgeler,Resimler ve Videolar dosyaları masaüstünde oluşturulan Backup dosyasına kopylanır.
-- Bunun yanısıra yüklü güncellemeler,lisans anahtarı ve yüklü programlar için ayrı txt dosyaları oluşturulur.
+Bunun yanısıra yüklü güncellemeler,lisans anahtarı ve yüklü programlar için ayrı txt dosyaları oluşturulur.
 - **Program Yükleme**: Backup dosyası içine oluşturulan InstalledPrograms.txt dosyasının içerigini okur.
-- Bu sayede Formattan önce oluştugunuz yedek ile formattan sonra aynı programlarınızı tekrar yükleyebilirsiniz.
+Bu sayede Formattan önce oluştugunuz yedek ile formattan sonra aynı programlarınızı tekrar yükleyebilirsiniz.
 
 ## Kurulum ve Kullanım
 - PowerShell'i yönetici olarak açın.
