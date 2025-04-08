@@ -1,5 +1,6 @@
 # WinToolify
-![WinToolify](https://github.com/user-attachments/assets/15cf63d5-b495-47d0-8199-e1852fa31924)
+
+![Ekran görüntüsü 2025-04-08 195025](https://github.com/user-attachments/assets/4829b3b3-53c5-4495-a9ba-67bb22fbb07e)
 
 [ENGLISH README](https://github.com/burakarslan0110/WinToolify/blob/main/README-EN.md)
 ## Genel Bakış
@@ -13,6 +14,7 @@ WinToolify, sistem performansını artırmak, hizmetleri yönetmek, gizlilik aya
 - **Gizlilik Ayarları**: Verilerinizi korumak için gizlilik ayarlarını düzenleyin.
 - **Gereksiz Uygulama Kaldırma**: Gereksiz önceden yüklenmiş uygulamaları belirleyin ve kaldırın.
 - **VCRedist Paketlerini Kur**: Visual C++ Redistributable paketlerini yükleyin.
+- **Yedekleme Dosyası Oluşturma**: Yedekleme dosyası oluşturun.
 - **Dil Ayarları**: Uygulamanın dilini değiştirin.
 - **Çıkış**: Uygulamayı kapatın.
 
@@ -56,6 +58,12 @@ WinToolify, sistem performansını artırmak, hizmetleri yönetmek, gizlilik aya
 - **Yazıcı Durumunu Göster**: Bağlı yazıcıların durumunu görüntüleyin.
 - **Yüklü Yazıcıları Listele**: Tüm yüklü yazıcıları listeleyin.
 - **Açık Portları Listele**: Şu anda açık olan ağ portlarını görüntüleyin.
+
+### Yedekleme Dosyası Oluşturma Menüsü
+- **Yedekleme Dosyası Oluşturma**: Masaüstü,Belgeler,Resimler ve Videolar dosyaları masaüstünde oluşturulan Backup dosyasına kopylanır.
+- Bunun yanısıra yüklü güncellemeler,lisans anahtarı ve yüklü programlar için ayrı txt dosyaları oluşturulur.
+- **Program Yükleme**: Backup dosyası içine oluşturulan InstalledPrograms.txt dosyasının içerigini okur.
+- Bu sayede Formattan önce oluştugunuz yedek ile formattan sonra aynı programlarınızı tekrar yükleyebilirsiniz.
 
 ## Kurulum ve Kullanım
 - PowerShell'i yönetici olarak açın.
