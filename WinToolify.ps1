@@ -149,7 +149,7 @@ $script:Translations = @{
         "WiFiProfileNotFound" = "Wi-Fi profile not found! Please check the name and try again."
         "WiFiPassword" = "Wi-Fi Password"
         "NoPasswordFound" = "No password found for this Wi-Fi network!"
-        "BackUp" = "Create Backup file."
+        "BackUp" = "Create Backup File."
         "InstallPrograms" = "Install Programs (After Backup)"
         "BackUpInfo" = "You can create your backup file"
         "BackUpInfo2" = "and you can reload the programs"
@@ -260,7 +260,7 @@ $script:Translations = @{
         "WiFiProfileNotFound" = "Wi-Fi profili bulunamadi! Lutfen adini kontrol edin ve tekrar deneyin."
         "WiFiPassword" = "Wi-Fi Sifresi"
         "NoPasswordFound" = "Bu Wi-Fi agi icin sifre bulunamadi!"
-        "BackUp" = "Yedekleme dosyasi oluştur."
+        "BackUp" = "Yedekleme Dosyasi Oluştur."
         "InstallPrograms" = "Programlari Yükle."
         "BackUpInfo" = "Yedekleme dosyanizi oluşturabilir"
         "BackUpInfo2" = "ve format sonrasi formattan önceki "
@@ -567,7 +567,7 @@ function Show-BackupMenu {
     Write-Host ("$padding| " + $(Get-Translation 'BackUpInfo2')).PadRight($padding.Length + 38) "|" -ForegroundColor White
     Write-Host ("$padding| " + $(Get-Translation 'BackUpInfo3')).PadRight($padding.Length + 38) "|" -ForegroundColor White
     Write-Host "$padding+--------------------------------------+" -ForegroundColor Yellow
-    Write-Host ("$padding|  " + $(Get-Translation 'space')).PadRight($padding.Length + 38) "|" -ForegroundColor White
+    Write-Host ("$padding" + $(Get-Translation 'space')).PadRight($padding.Length + 38) "" -ForegroundColor White
     Write-Host "$padding+--------------------------------------+" -ForegroundColor Yellow
     Write-Host ("$padding|  [1] " + $(Get-Translation 'BackUp')).PadRight($padding.Length + 38) "|" -ForegroundColor White
     Write-Host ("$padding|  [2] " + $(Get-Translation 'InstallPrograms')).PadRight($padding.Length + 38) "|" -ForegroundColor White
@@ -911,14 +911,14 @@ function backup {
         Copy-Item $_.FullName -Destination $destinationPath -Force
     }
 
-    #Get-ChildItem -Path $userDocuments -Recurse | Where-Object { $_.Name -notin $excludeItems } | ForEach-Object {
-        #$destinationPath = Join-Path $Script:backupFolder\Documents $_.FullName.Substring($userDocuments.Length)
-        #$destinationDir = Split-Path -Parent $destinationPath
-        #if (!(Test-Path $destinationDir)) {
-            #New-Item -ItemType Directory -Path $destinationDir -Force | Out-Null
-        #}
-        #Copy-Item $_.FullName -Destination $destinationPath -Force
-    #}
+    Get-ChildItem -Path $userDocuments -Recurse | Where-Object { $_.Name -notin $excludeItems } | ForEach-Object {
+        $destinationPath = Join-Path $Script:backupFolder\Documents $_.FullName.Substring($userDocuments.Length)
+        $destinationDir = Split-Path -Parent $destinationPath
+        if (!(Test-Path $destinationDir)) {
+            New-Item -ItemType Directory -Path $destinationDir -Force | Out-Null
+        }
+        Copy-Item $_.FullName -Destination $destinationPath -Force
+    }
 
     # Masaüstü dosyalarını yedekle
     Get-ChildItem -Path $userDesktop -Recurse | Where-Object { 
